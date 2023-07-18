@@ -37,7 +37,7 @@ function App() {
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintexDate">
               <Form.Label column sm="2">
                 Date
               </Form.Label>
@@ -45,7 +45,7 @@ function App() {
                 <Form.Control type='date' onChange={onDateChange} />
               </Col>
             </Form.Group>
-            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Group as={Row} className="mb-3" controlId="formFile">
               <Form.Label column sm="2">
                 File
               </Form.Label>
@@ -54,7 +54,7 @@ function App() {
               </Col>
             </Form.Group>
             <div className="d-grid gap-2">
-              <Button variant="primary" type="submit" size="lg">
+              <Button disabled={!vendor || !date || !file} variant="primary" type="submit" size="lg" >
                 Submit
               </Button>
 
